@@ -87,3 +87,22 @@ footer {
     font-size: 0.9rem;
     color: #b0b0b0;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main p, main ul {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
