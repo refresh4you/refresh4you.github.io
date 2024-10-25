@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +30,12 @@
             height: 100vh;
             flex-direction: column;
             text-align: center;
+            overflow: hidden;
         }
 
         header {
             margin-bottom: 50px;
+            animation: fadeInText 2s ease-in-out;
         }
 
         h1 {
@@ -49,7 +51,7 @@
             margin-bottom: 30px;
         }
 
-        .btn {
+        .btn, .tos-btn {
             display: inline-block;
             padding: 15px 30px;
             margin-top: 20px;
@@ -59,16 +61,29 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .btn:hover {
+        .btn:hover, .tos-btn:hover {
             background-color: #444444;
+            transform: scale(1.05);
         }
 
         .material-icons {
             vertical-align: middle;
             margin-right: 10px;
+        }
+
+        .image-container {
+            opacity: 0;
+            animation: fadeInImage 3s ease forwards;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -77,17 +92,47 @@
             font-size: 0.8rem;
             color: #666666;
         }
+
+        @keyframes fadeInImage {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>LYX</h1>
-        <p>An Discord AI assistant for our Minecraft server made with 💖 by @refresh4ever</p>
+        <p>An French Discord AI assistant made with 💖 by @refresh4ever</p>
     </header>
+
+    <div class="image-container">
+        <img src="https://cdn.discordapp.com/avatars/1299130835873693767/eb097f6905dce369cefab96822ba604e.webp?size=128" alt="LYX pfp">
+    </div>
 
     <a href="https://discord.com/oauth2/authorize?client_id=1299130835873693767&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn">
         <i class="material-icons">add</i> Add LYX on your server 😃
+    </a>
+
+    <a href="https://refresh4you.github.io/tos" class="tos-btn">
+        <i class="material-icons">gavel</i> View Bot's ToS
     </a>
 
     <footer>
