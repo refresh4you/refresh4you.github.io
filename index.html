@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LYX Discord Bot">
     <meta name="author" content="@refresh4ever">
-    <title>LYX - Discord Bot</title>
+    <title>LYX - Index</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -19,30 +19,31 @@
             box-sizing: border-box;
         }
 
-        /* General Styling */
+        /* Global Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #0d0d0d;
+            color: #d9d9d9;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 20px;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* Navbar */
         .navbar {
             width: 100%;
-            background-color: #1f1f1f;
+            background-color: #1a1a1a;
             display: flex;
             justify-content: center;
             padding: 15px 0;
             position: fixed;
             top: 0;
             z-index: 100;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .navbar a {
@@ -54,12 +55,12 @@
         }
 
         .navbar a:hover {
-            color: #bbbbbb;
+            color: #cccccc;
         }
 
-        /* Header */
+        /* Header Section */
         header {
-            margin-top: 80px;
+            margin-top: 100px;
             animation: fadeInText 2s ease-in-out;
         }
 
@@ -67,6 +68,7 @@
             font-size: 4rem;
             font-weight: 700;
             color: #ffffff;
+            letter-spacing: 2px;
         }
 
         p {
@@ -74,12 +76,19 @@
             font-weight: 300;
             color: #aaaaaa;
             margin-bottom: 30px;
+            animation: fadeInText 2s 0.5s ease-in-out forwards;
         }
 
-        /* Image */
+        /* Image Section */
         .image-container {
             animation: fadeInImage 3s ease forwards;
             margin-bottom: 30px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scale(1);
         }
 
         .image-container img {
@@ -88,25 +97,36 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         }
 
-        /* Buttons */
+        /* Button Styles */
         .btn, .tos-btn {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 15px 30px;
             margin: 10px;
-            background-color: #1f1f1f;
+            background-color: #333333;
             color: #ffffff;
             font-weight: 700;
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             width: 80%;
             max-width: 300px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .btn:hover, .tos-btn:hover {
             background-color: #444444;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn i, .tos-btn i {
+            margin-right: 8px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
         }
 
         /* Footer */
